@@ -1,0 +1,49 @@
+params:
+    - id: github_client_id
+      type: string
+      name: "GitHub Client ID"
+      description: "GitHub OAuth Client ID"
+
+    - id: github_client_secret
+      type: string
+      name: "GitHub Client Secret"
+      description: "GitHub OAuth Client Secret"
+
+    - id: github_redirect_url
+      type: string
+      name: "GitHub Redirect URL"
+      description: "GitHub OAuth Redirect URL"
+
+    - id: openai_base_url
+      type: string
+      name: "OpenAI Base URL"
+      description: "OpenAI Base URL,not contain /v1"
+      optional: true
+
+    - id: openai_api_key
+      type: string
+      name: "OpenAI API Key"
+      description: "OpenAI API Key"
+      optional: true
+
+locales:
+    zh:
+        github_client_id:
+            name: "GitHub Client ID"
+            description: "GitHub OAuth Client ID"
+
+        github_client_secret:
+            name: "GitHub Client Secret"
+            description: "GitHub OAuth Client Secret"
+
+        github_redirect_url:
+            name: "GitHub Redirect URL"
+            description: "GitHub OAuth 重定向 URL"
+
+        openai_base_url:
+            name: "OpenAI Base URL"
+            description: "OpenAI Base URL,不加/v1"
+
+        openai_api_key:
+            name: "OpenAI API Key"
+            description: "OpenAI API 密钥"
