@@ -1,0 +1,14 @@
+package: community.lazycat.app.excalidraw-full
+version: 0.1.0
+name: Excalidraw
+description: "您的自托管、云就绪协作平台."
+min_os_version: "1.5.0"
+homepage: https://github.com/BetterAndBetterII/excalidraw-full
+author: BetterAndBetterII
+locales:
+  zh:
+    description: "您的自托管、云就绪协作平台."
+    name: Excalidraw
+  en:
+    description: "Your self-hosted, cloud-ready collaboration platform."
+    name: Excalidraw

@@ -1,0 +1,25 @@
+application:
+  subdomain: excalidraw-full
+  background_task: true
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://excalidraw-full:3002/
+services:
+  excalidraw-full:
+    # upstream: ghcr.io/betterandbetterii/excalidraw-full:latest
+    image: ghcr.1ms.run/betterandbetterii/excalidraw-full:latest@sha256:3f1efef4d6475de318efa7f95d675d8caf5a6479beca5e2f2062f31a1c083980
+    environment:
+      - STORAGE_TYPE=sqlite
+      - DATA_SOURCE_NAME=/root/db/excalidraw.db
+      - LOCAL_STORAGE_PATH=/root/data
+      - JWT_SECRET={{stable_secret "excalidraw#secret_key"}}
+      - GITHUB_CLIENT_ID={{.U.github_client_id}}
+      - GITHUB_CLIENT_SECRET={{.U.github_client_secret}}
+      - GITHUB_REDIRECT_URL={{.U.github_redirect_url}}
+      - OPENAI_BASE_URL={{.U.openai_base_url}}
+      - OPENAI_API_KEY={{.U.openai_api_key}}
+    binds:
+      - /lzcapp/var/data:/root/data
+      - /lzcapp/var/db:/root/db
